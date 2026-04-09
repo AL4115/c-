@@ -1,36 +1,13 @@
-// multiple calls.
-// write a function to calculate the nth fibonacci number by using for loop.
+// wap to find the position of an element in an array by using recursion .
 # include <iostream>
 using namespace std;
-/*int fibonacci(int n){
-    int a=0;
-    int b=1;
-    cout<<a<<endl;
-    cout<<b<<endl;
-    for(int i=0;i<=n;i++){
-        int s=a+b;
-        cout<<s<<endl;
-        a=b;
-        b=s;
-    }
-    return n;
+int position(int arr[],int n,int pos){
+    if(arr[pos]==n) return pos;
+    return position(arr,n,pos+1);
 }
-int main(){
+int main (){
+    int arr[5] = {1,2,3,5,8};
     int n;
-    cout<<"enter n:";
-    cin>>n;
-    fibonacci(n);
-    return 0;
-}*/
-// write a function to calculate the nth fibonacci number by using recursion.
-int fibonacci(int n){
-    if(n<=2) return 1;
-   return fibonacci(n-1)+fibonacci(n-2); 
-}
-int main(){
-    int n;
-    cout<<"enter the number :";
-    cin>>n;
-    cout<<fibonacci(n);
+    cout<<position(arr,5,0);
     return 0;
 }
