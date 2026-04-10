@@ -1,0 +1,20 @@
+// wap to print the pattern in zigzag
+# include <iostream>
+using namespace std;
+void zigzag(int n){
+    if(n==0) return ;
+    cout<<n;
+    zigzag(n-1);
+    cout<<n;
+    zigzag(n-1);
+    cout<<n;
+    zigzag(n-1);
+    return;
+}
+int main(){
+    int n;
+    cout<<"enter n:";
+    cin>>n;
+    zigzag(n);
+    return 0;
+}
